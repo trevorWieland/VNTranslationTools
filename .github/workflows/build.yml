@@ -18,6 +18,11 @@ jobs:
       with:
         files: Build
         dest: VNTranslationTools.zip
+    - id: previous_tag
+      uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      with:
+        fallback: 1.0.0
     - uses: softprops/action-gh-release@v1
       with:
+        tag_name: ${{steps.previous_tag.outputs.tag}}
         files: VNTranslationTools.zip
