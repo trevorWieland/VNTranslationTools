@@ -9,7 +9,7 @@ namespace VNTextPatch.Shared.Scripts.Kirikiri
 {
     public class PsbScript : IScript
     {
-        private const int LanguageIndex = 0;
+        private const int LanguageIndex = 1;
 
         private static readonly Regex ControlCodeRegex = new Regex(
           @"    \\.        # Escape sequence
